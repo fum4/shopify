@@ -1,0 +1,17 @@
+api_version = "2025-04"
+
+[[extensions]]
+name = "t:name"
+handle = "vip-discount-function"
+type = "function"
+uid = "5dc6e8bf-5c29-7f0e-ad7a-870394522aca5292d3b6"
+description = "t:description"
+
+[[extensions.targeting]]
+target = "cart.lines.discounts.generate.run"
+input_query = "src/cart_lines_discounts_generate_run.graphql"
+export = "cart-lines-discounts-generate-run"
+
+[extensions.build]
+command = ""
+path = "dist/function.wasm"

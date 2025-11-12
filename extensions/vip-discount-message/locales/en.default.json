@@ -1,0 +1,4 @@
+{
+  "defaultHeading": "🌟 VIP Discount",
+  "defaultDescription": "Thank you for being a valued VIP customer! <br /> You're saving ${{savingAmount}} with your {{percentageAmount}}% VIP discount."
+}

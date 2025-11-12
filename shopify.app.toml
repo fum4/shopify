@@ -1,0 +1,25 @@
+client_id = "b542a182f80d8c3023fd9e85af9bfcc1"
+name = "vip-discount"
+application_url = "https://example.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2026-01"
+
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled"]
+uri = "/webhooks/app/uninstalled"
+
+[[webhooks.subscriptions]]
+topics = ["app/scopes_update"]
+uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+scopes = "write_products,write_discounts,read_customers"
+
+
+[auth]
+redirect_urls = ["https://example.com/api/auth"]

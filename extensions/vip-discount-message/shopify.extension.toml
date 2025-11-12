@@ -1,0 +1,51 @@
+api_version = "2025-10"
+
+[[extensions]]
+name = "vip-discount-message"
+handle = "vip-discount-message"
+type = "ui_extension"
+uid = "a11df538-16bc-a14a-1837-409727d7e91c41df6800"
+
+[extensions.capabilities]
+api_access = true
+network_access = true
+
+[extensions.capabilities.customer_data]
+access_required = true
+
+[[extensions.metafields]]
+# resource = "customer"
+namespace = "custom"
+key = "is_vip"
+
+[[extensions.targeting]]
+target = "purchase.checkout.block.render"
+module = "./src/Checkout.tsx"
+
+[[extensions.targeting]]
+target = "purchase.checkout.reductions.render-before"
+module = "./src/Checkout.tsx"
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "heading"
+type = "single_line_text_field"
+name = "Banner heading"
+description = "Enter a heading for the banner."
+[[extensions.settings.fields]]
+key = "description"
+type = "single_line_text_field"
+name = "Banner description"
+description = "Enter a description for the banner."
+[[extensions.settings.fields]]
+key = "tone"
+type = "single_line_text_field"
+name = "Banner tone"
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = "[\"info\", \"success\", \"warning\", \"critical\"]"
+[[extensions.settings.fields]]
+key = "collapsible"
+type = "boolean"
+name = "Show collapsible description."
+description = "Display controls to expand or collapse the banner description."
