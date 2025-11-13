@@ -2,6 +2,8 @@
 
 A Shopify app that provides automatic 15% discounts for customers tagged as "VIP".
 
+https://vip-store-10016.myshopify.com
+
 ## What We Accomplished
 
 ### 1. Discount Function (`vip-discount-function`) ✅

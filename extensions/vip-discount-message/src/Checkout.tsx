@@ -1,6 +1,6 @@
 import '@shopify/ui-extensions/preact';
 import {render} from "preact";
-import {useMetafield, useTranslate, useTotalAmount} from '@shopify/ui-extensions/checkout/preact';
+import { /* useMetafield, */ useTranslate, useTotalAmount} from '@shopify/ui-extensions/checkout/preact';
 
 interface ExtensionSettings {
   heading?: string;
@@ -19,15 +19,14 @@ function Extension() {
   const translate = useTranslate();
   const totalAmount = useTotalAmount();
 
-  const isVIP = useMetafield({
-    namespace: 'custom',
-    key: 'is_vip',
-  });
+  // const isVIP = useMetafield({
+  //   namespace: 'custom',
+  //   key: 'is_vip',
+  // });
 
-  // this should be `if (!isVIP?.value)`; bypassing it to show the banner for all users
-  if (isVIP?.value) {
-    return null;
-  }
+  // if (!isVIP?.value) {
+  //   return null;
+  // }
 
   // Calculate savings amount
   // If current total is 85% of original (after 15% discount), then discount = total × (15/85)
