@@ -24,6 +24,7 @@ function Extension() {
     key: 'is_vip',
   });
 
+  // this should be `if (!isVIP?.value)`; bypassing it to show the banner for all users
   if (isVIP?.value) {
     return null;
   }

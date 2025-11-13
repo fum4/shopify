@@ -14,7 +14,7 @@ network_access = true
 access_required = true
 
 [[extensions.metafields]]
-# resource = "customer"
+resource = "customer"
 namespace = "custom"
 key = "is_vip"
 
